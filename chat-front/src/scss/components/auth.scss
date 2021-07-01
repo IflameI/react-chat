@@ -1,0 +1,76 @@
+.auth {
+  height: 100vh;
+  &__row {
+    @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  &__top {
+    color: #202002;
+  }
+  &__title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 21px;
+    opacity: 0.5;
+    margin-bottom: 15px;
+  }
+  &__item {
+    background: #fff;
+    padding: 35px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04204);
+    border-radius: 3px;
+    min-width: 430px;
+    &--check {
+      min-height: 300px;
+      @include flexbox();
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__input {
+    margin-bottom: 10px;
+    @include flexbox();
+    justify-content: center;
+    input {
+      width: 100%;
+      display: block;
+      font-size: 14px;
+      line-height: 19px;
+      border-radius: 4px;
+      padding: 0 10px;
+      height: 56px;
+      border: 1px solid #dddddd;
+    }
+  }
+  &__button {
+    width: 100%;
+    button {
+      height: 56px;
+      text-transform: uppercase;
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      background: #21a0ff;
+    }
+    button:disabled {
+      opacity: 0.7;
+    }
+  }
+  &__subtext {
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    a {
+      color: rgba(173, 173, 173, 1);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+//====================================================================================================
+.header {
+  z-index: 50;
+  color: #fff;
+  &__row {
+    @include flexbox();
+    background: #5682a3;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+    padding: 17px 20px 15px 22px;
+  }
+  &__name {
+    @include flexbox();
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+//====================================================================================================
