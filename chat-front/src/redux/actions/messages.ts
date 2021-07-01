@@ -10,7 +10,7 @@ export const addMessage = (message: any): messagesActions => {
 
 export const fetchSendMessage = (text: string, dialogId: string) => {
   return async () => {
-    await axios.post(`http://localhost:3000/messages`, {
+    await axios.post(`/messages`, {
       text: text,
       dialog_id: dialogId,
     });
@@ -21,7 +21,7 @@ export const fetchMessages = (id: string) => {
   return async (dispatch: Dispatch<messagesActions>) => {
     try {
       dispatch({ type: messagesActionType.FETCH_MESSAGES_PENDING });
-      const response = await axios.get(`http://localhost:3000/messages?dialog=` + id);
+      const response = await axios.get(`/messages?dialog=` + id);
       dispatch({ type: messagesActionType.FETCH_MESSAGES_SUCCESS, payload: response.data });
     } catch (e) {
       dispatch({

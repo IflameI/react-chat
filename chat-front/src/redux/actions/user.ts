@@ -21,7 +21,7 @@ export const setIsAuth = (payload: boolean): userActions => {
 export const fetchUserData = () => {
   return async (dispatch: Dispatch<userActions>) => {
     try {
-      const response = await axios.get('http://localhost:3000/user/me');
+      const response = await axios.get('/user/me');
 
       dispatch(setUserData(response.data));
     } catch (e) {
@@ -40,7 +40,7 @@ export const fetchUserData = () => {
 export const fetchUserLogin = (postData: any) => {
   return async (dispatch: any) => {
     try {
-      const response = await axios.post('http://localhost:3000/user/signin', postData);
+      const response = await axios.post('/user/signin', postData);
       const { token } = response.data;
 
       window.axios.defaults.headers.common['token'] = token;
@@ -60,7 +60,7 @@ export const fetchUserLogin = (postData: any) => {
 export const fetchUserRegister = (postData: any) => {
   return async (dispatch: any) => {
     try {
-      const response = await axios.post('http://localhost:3000/user/signup', postData);
+      const response = await axios.post('/user/signup', postData);
       return response;
     } catch (e) {
       console.log('Ошибка');

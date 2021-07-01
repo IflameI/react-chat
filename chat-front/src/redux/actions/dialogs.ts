@@ -12,7 +12,7 @@ export const setCurrentDialog = (payload: any): dialogsActions => {
 export const fetchDialogs = () => {
   return async (dispatch: Dispatch<dialogsActions>) => {
     try {
-      const response = await axios.get('http://localhost:3000/dialogs');
+      const response = await axios.get('/dialogs');
       dispatch({ type: dialogsActionType.FETCH_DIALOGS_SUCCESS, payload: response.data });
     } catch (e) {
       dispatch({
