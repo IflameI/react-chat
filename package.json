@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "heroku-postbuild": "cd chat-front && npm install && npm run build",
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "devDependencies": {
     "json-server": "^0.15.0"
